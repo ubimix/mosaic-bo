@@ -1,0 +1,14 @@
+{
+    "name" : "mosaic-bo",
+    "version" : "0.0.1",
+    "dependencies" : {
+        "jquery" : "*",
+        "underscore" : "*",
+        "jquery" : "*",
+        "jquery-cookie" : "*",
+        "mosaic-commons" : "*",
+        "mosaic-teleport" : "*",
+        "requirejs" : "*",
+        "superagent" : "*"
+    }
+}

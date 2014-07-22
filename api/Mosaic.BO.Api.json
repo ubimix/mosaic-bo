@@ -1,0 +1,50 @@
+{
+    "api" : [ {
+        "method" : "login",
+        "path" : "/auth/login",
+        "http" : "post",
+        "description" : "Opens a new user's session."
+    }, {
+        "method" : "logout",
+        "path" : "/auth/logout",
+        "http" : "post",
+        "description" : "Closes the current session."
+    }, 
+    
+    {
+        "method" : "createProject",
+        "path" : "projects",
+        "http" : "post",
+        "description" : "Creates a new project"
+    }, {
+        "method" : "deleteProject",
+        "path" : "/project/:projectKey",
+        "http" : "delete",
+        "description" : "Deletes a project with the specified project key"
+    },
+    
+    {
+        "method" : "createResource",
+        "path" : "/project/:projectKey",
+        "http" : "post",
+        "description" : "Creates a new resource in the project with the specified key."
+    },{
+        "method" : "saveResource",
+        "path" : "/project/:projectKey/:resourceId",
+        "http" : "put",
+        "description" : "Saves a project resource corresponding to the specified identifier."
+    },{
+        "method" : "loadResource",
+        "path" : "/project/:projectKey/:resourceId",
+        "http" : "get",
+        "description" : "Loads a resource corresponding to the specified project key and resource identifier."
+    },
+    
+    
+    {
+        "method" : "loadResources",
+        "path" : "/project/:projectKey",
+        "http" : "get",
+        "description" : "Loads project resources corresponding to the search criteria."
+    } ]
+}

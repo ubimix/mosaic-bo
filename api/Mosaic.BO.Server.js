@@ -2,6 +2,7 @@ var Mosaic = require('mosaic-commons');
 require('mosaic-teleport');
 require('./Mosaic.BO');
 require('./Mosaic.BO.Api');
+var apiConfig = require('./Mosaic.BO.Api.json');
 var _ = require('underscore');
 
 /** This class implements methods allowing to register the API on the server. */
@@ -14,10 +15,14 @@ Mosaic.BO.Server = Mosaic.Class.extend({
 
     /** Register an API endpoint in the specified application. */
     registerIn : function(app) {
-        var api = new Mosaic.BO.Api();
+        var api = new Mosaic.BO.Api(this.options);
+        var apiDescriptor = new Mosaic.ApiDescriptor();
+        apiDescriptor.importJson(apiConfig);
+
         var path = this.options.path || '/api';
         var stub = new Mosaic.ApiDescriptor.HttpServerStub({
             path : path,
+            descriptor : apiDescriptor,
             instance : api,
             beginHttpCall : function(params) {
                 var sessionId = params.req.get('x-session-id') || // HTTP

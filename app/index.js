@@ -45,7 +45,6 @@
                 // Load the session ID from headers and save it as a field in
                 // the stub.
                 var sessionId = params.res.headers['x-session-id'];
-                console.log('SESSION_ID', sessionId);
                 if (sessionId) {
                     params.stub.sessionId = sessionId;
                 }

@@ -20,7 +20,8 @@
     "dependencies" : {
         "underscore" : "~1.4.4",
         "mosaic-commons" : "*",
-        "mosaic-teleport" : "*"
+        "mosaic-teleport" : "*",
+        "superagent" : "*"
     },
     "devDependencies" : {
         "mocha" : "*",

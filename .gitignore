@@ -3,3 +3,5 @@ node_modules
 /sandbox
 libs
 npm-debug.log
+/tmp
+/baasbox-0.8.2
